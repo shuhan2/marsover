@@ -16,6 +16,14 @@ public class SecondMarsOver {
     this.direction = direction;
   }
 
+  public int getX() {
+    return x;
+  }
+
+  public int getY() {
+    return y;
+  }
+
   public SecondMarsOver goForward() {
     if (SecondDirection.SOUTH ==  direction) {
       return new SecondMarsOver(x, y - 1, direction);

@@ -3,23 +3,28 @@ package second;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static second.SecondDirection.NORTH;
-import static second.SecondDirection.SOUTH;
 
 class SecondMarsOverTest {
 
   @Test
   void should_return_north_x_1_y_2_when_go_forward_given_north_x_1_y_1() {
-    SecondMarsOver marsOver = new SecondMarsOver(1, 1, NORTH).goForward();
+    SecondMarsOver marsOver = new SecondNorthMarsOver(1, 1).goForward();
 
-    assertEquals(new SecondMarsOver(1, 2, NORTH), marsOver);
+    assertEquals(new SecondNorthMarsOver(1, 2), marsOver);
   }
 
   @Test
   void should_return_north_x_1_y_0_when_go_forward_given_south_x_1_y_1() {
-    SecondMarsOver marsOver = new SecondMarsOver(1, 1, SOUTH).goForward();
+    SecondMarsOver marsOver = new SecondSouthMarsOver(1, 1).goForward();
 
-    assertEquals(new SecondMarsOver(1, 0, SOUTH), marsOver);
+    assertEquals(new SecondSouthMarsOver(1, 0), marsOver);
+  }
+
+  @Test
+  void should_return_north_x_0_y_1_when_go_forward_given_west_x_1_y_1() {
+    SecondMarsOver marsOver = new SecondWestMarsOver(1, 1).goForward();
+
+    assertEquals(new SecondWestMarsOver(0, 1), marsOver);
   }
 
 }
