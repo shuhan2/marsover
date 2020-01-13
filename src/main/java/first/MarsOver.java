@@ -30,4 +30,8 @@ public class MarsOver {
   public MarsOver turnLeft() {
     return new MarsOver(this.x, this.y, "West");
   }
+
+  public MarsOver turnRight() {
+    return new MarsOver(this.x, this.y, "East");
+  }
 }
