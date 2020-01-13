@@ -43,14 +43,13 @@ public class MarsOver {
 
   public MarsOver turnLeft() {
     int originalIndexOfDirection = Arrays.asList(values()).indexOf(direction);
-    int index = originalIndexOfDirection == 0 ? originalIndexOfDirection + 3 : originalIndexOfDirection - 1;
-    return new MarsOver(this.x, this.y, Direction.values()[index]);
+    int indexOfLeft = originalIndexOfDirection == 0 ? 3 : originalIndexOfDirection - 1;
+    return new MarsOver(this.x, this.y, Direction.values()[indexOfLeft]);
   }
 
   public MarsOver turnRight() {
-    if (direction.equals(SOUTH)) {
-      return new MarsOver(this.x, this.y, WEST);
-    }
-    return new MarsOver(this.x, this.y, EAST);
+    int originalIndexOfDirection = Arrays.asList(values()).indexOf(direction);
+    int indexOfRight = originalIndexOfDirection == 3 ? 0 : originalIndexOfDirection + 1;
+    return new MarsOver(this.x, this.y, Direction.values()[indexOfRight]);
   }
 }
