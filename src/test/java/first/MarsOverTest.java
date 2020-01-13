@@ -30,4 +30,14 @@ class MarsOverTest {
     assertEquals(1, marsOver.getY());
     assertEquals("East", marsOver.getDirection());
   }
+
+  @Test
+  void should_return_south_coordinate_1_0_when_go_forward_given_south_coordinate_1_1() {
+    MarsOver marsOver = new MarsOver(1, 1, "South").goForward();
+    assertEquals(1, marsOver.getX());
+    assertEquals(0, marsOver.getY());
+    assertEquals("South", marsOver.getDirection());
+  }
+
+
 }
