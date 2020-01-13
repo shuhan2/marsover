@@ -38,6 +38,9 @@ public class MarsOver {
   }
 
   public MarsOver turnRight() {
+    if (direction.equals("South")) {
+      return new MarsOver(this.x, this.y, "West");
+    }
     return new MarsOver(this.x, this.y, "East");
   }
 }
