@@ -1,0 +1,67 @@
+Task - 1
+design: interface,direction
+
+north direction
+1.
+given: position(1, 1) and direction(north)
+when: goForward
+then: return position(1, 2) and north direction
+
+2.
+given: position(1, 1) and north direction
+when: turnLeft
+then: return position(1, 1) and west direction
+
+3.
+given: position(1, 1) and north direction
+when: turnRight
+then: return position(1, 1) and east direction
+
+south direction
+4.
+given: position(1, 1) and south direction
+when: goForward
+then: return position(1, 0) and south direction
+
+5.
+given: position(1, 1) and south direction
+when: turnLeft
+then: return position(1, 1) and east direction
+
+6.
+given: position(1, 1) and south direction
+when: turnRight
+then: return position(1, 1) and west direction\
+
+
+east direction
+7.
+given: position(1, 1) and east direction
+when: goForward
+then: return position(0, 1) and east direction
+
+8.
+given: position(1, 1) and east direction
+when: turnLeft
+then: return position(1, 1) and south direction
+
+9.
+given: position(1, 1) and east direction
+when: turnRight
+then: return position(1, 1) and north direction
+
+west direction
+10.
+given: position(1, 1) and west direction
+when: goForward
+then: return position(2, 1) and west direction
+
+11.
+given: position(1, 1) and west direction
+when: turnLeft
+then: return position(1, 1) and north direction
+
+12.
+given: position(1, 1) and west direction
+when: turnRight
+then: return position(0, 1) and south direction
