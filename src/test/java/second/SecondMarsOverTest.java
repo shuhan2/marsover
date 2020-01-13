@@ -14,17 +14,24 @@ class SecondMarsOverTest {
   }
 
   @Test
-  void should_return_north_x_1_y_0_when_go_forward_given_south_x_1_y_1() {
+  void should_return_south_x_1_y_0_when_go_forward_given_south_x_1_y_1() {
     SecondMarsOver marsOver = new SecondSouthMarsOver(1, 1).goForward();
 
     assertEquals(new SecondSouthMarsOver(1, 0), marsOver);
   }
 
   @Test
-  void should_return_north_x_0_y_1_when_go_forward_given_west_x_1_y_1() {
+  void should_return_west_x_0_y_1_when_go_forward_given_west_x_1_y_1() {
     SecondMarsOver marsOver = new SecondWestMarsOver(1, 1).goForward();
 
     assertEquals(new SecondWestMarsOver(0, 1), marsOver);
+  }
+
+  @Test
+  void should_return_east_x_2_y_1_when_go_forward_given_east_x_1_y_1() {
+    SecondEastMarsOver marsOver = new SecondEastMarsOver(1, 1).goForward();
+
+    assertEquals(new SecondEastMarsOver(2, 1), marsOver);
   }
 
 }

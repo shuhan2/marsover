@@ -10,7 +10,7 @@ public class SecondMarsOver {
   private int y;
   private SecondDirection direction;
 
-  public SecondMarsOver(int x, int y, SecondDirection direction) {
+  SecondMarsOver(int x, int y, SecondDirection direction) {
     this.x = x;
     this.y = y;
     this.direction = direction;
@@ -22,13 +22,6 @@ public class SecondMarsOver {
 
   public int getY() {
     return y;
-  }
-
-  public SecondMarsOver goForward() {
-    if (SecondDirection.SOUTH ==  direction) {
-      return new SecondMarsOver(x, y - 1, direction);
-    }
-    return new SecondMarsOver(x, y + 1, direction);
   }
 
   @Override
