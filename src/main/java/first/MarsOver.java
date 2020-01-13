@@ -26,4 +26,8 @@ public class MarsOver {
   public MarsOver goForward() {
     return new MarsOver(this.x, this.y + 1, direction);
   }
+
+  public MarsOver turnLeft() {
+    return new MarsOver(this.x, this.y, "West");
+  }
 }
