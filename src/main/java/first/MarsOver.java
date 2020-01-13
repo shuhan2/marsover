@@ -2,7 +2,7 @@ package first;
 
 import java.util.Arrays;
 
-import static first.Direction.*;
+import static first.Direction.values;
 
 public class MarsOver {
 
@@ -26,19 +26,6 @@ public class MarsOver {
 
   public Direction getDirection() {
     return direction;
-  }
-
-  public MarsOver goForward() {
-    if (direction.equals(EAST)) {
-      return new MarsOver(this.x + 1, this.y, direction);
-    }
-    if (direction.equals(WEST)) {
-      return new MarsOver(this.x - 1, this.y, direction);
-    }
-    if (direction.equals(SOUTH)) {
-      return new MarsOver(this.x, this.y - 1, direction);
-    }
-    return new MarsOver(this.x, this.y + 1, direction);
   }
 
   public MarsOver turnLeft() {
