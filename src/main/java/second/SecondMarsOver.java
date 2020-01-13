@@ -1,10 +1,8 @@
 package second;
 
-
 import java.util.Arrays;
 
-import static second.SecondDirection.*;
-
+import static second.SecondDirection.values;
 
 public class SecondMarsOver {
 
@@ -19,6 +17,9 @@ public class SecondMarsOver {
   }
 
   public SecondMarsOver goForward() {
+    if (SecondDirection.SOUTH ==  direction) {
+      return new SecondMarsOver(x, y - 1, direction);
+    }
     return new SecondMarsOver(x, y + 1, direction);
   }
 
@@ -30,8 +31,11 @@ public class SecondMarsOver {
 
   @Override
   public boolean equals(Object obj) {
-    return this.x == ((SecondMarsOver)obj).x &&
-        this.y == ((SecondMarsOver)obj).y &&
-        this.direction.equals(((SecondMarsOver)obj).direction);
+    if (obj instanceof SecondMarsOver) {
+      return this.x == ((SecondMarsOver) obj).x &&
+          this.y == ((SecondMarsOver) obj).y &&
+          this.direction.equals(((SecondMarsOver) obj).direction);
+    }
+    return false;
   }
 }
