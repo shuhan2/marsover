@@ -39,5 +39,11 @@ class MarsOverTest {
     assertEquals("South", marsOver.getDirection());
   }
 
-
+  @Test
+  void should_return_east_coordinate_1_1_when_turn_left_given_south_coordinate_1_1() {
+    MarsOver marsOver = new MarsOver(1, 1, "South").turnLeft();
+    assertEquals(1, marsOver.getX());
+    assertEquals(1, marsOver.getY());
+    assertEquals("East", marsOver.getDirection());
+  }
 }
