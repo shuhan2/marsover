@@ -10,7 +10,7 @@ public class MarsOver {
   private int y;
   private Direction direction;
 
-  public MarsOver(int x, int y, Direction direction) {
+  MarsOver(int x, int y, Direction direction) {
     this.x = x;
     this.y = y;
     this.direction = direction;
