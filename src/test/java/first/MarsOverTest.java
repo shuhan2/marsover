@@ -3,63 +3,72 @@ package first;
 
 import org.junit.jupiter.api.Test;
 
+import static first.Direction.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class MarsOverTest {
 
   @Test
   void should_return_north_coordinate_1_2_when_go_forward_given_north_coordinate_1_1() {
-    MarsOver marsOver = new MarsOver(1, 1, "North").goForward();
+    MarsOver marsOver = new MarsOver(1, 1, NORTH).goForward();
     assertEquals(1, marsOver.getX());
     assertEquals(2, marsOver.getY());
-    assertEquals("North", marsOver.getDirection());
+    assertEquals(NORTH, marsOver.getDirection());
   }
 
   @Test
   void should_return_west_coordinate_1_1_when_turn_left_given_north_coordinate_1_1() {
-    MarsOver marsOver = new MarsOver(1, 1, "North").turnLeft();
+    MarsOver marsOver = new MarsOver(1, 1, NORTH).turnLeft();
     assertEquals(1, marsOver.getX());
     assertEquals(1, marsOver.getY());
-    assertEquals("West", marsOver.getDirection());
+    assertEquals(WEST, marsOver.getDirection());
   }
 
   @Test
   void should_return_east_coordinate_1_1_when_turn_right_given_north_coordinate_1_1() {
-    MarsOver marsOver = new MarsOver(1, 1, "North").turnRight();
+    MarsOver marsOver = new MarsOver(1, 1, NORTH).turnRight();
     assertEquals(1, marsOver.getX());
     assertEquals(1, marsOver.getY());
-    assertEquals("East", marsOver.getDirection());
+    assertEquals(EAST, marsOver.getDirection());
   }
 
   @Test
   void should_return_south_coordinate_1_0_when_go_forward_given_south_coordinate_1_1() {
-    MarsOver marsOver = new MarsOver(1, 1, "South").goForward();
+    MarsOver marsOver = new MarsOver(1, 1, SOUTH).goForward();
     assertEquals(1, marsOver.getX());
     assertEquals(0, marsOver.getY());
-    assertEquals("South", marsOver.getDirection());
+    assertEquals(SOUTH, marsOver.getDirection());
   }
 
   @Test
   void should_return_east_coordinate_1_1_when_turn_left_given_south_coordinate_1_1() {
-    MarsOver marsOver = new MarsOver(1, 1, "South").turnLeft();
+    MarsOver marsOver = new MarsOver(1, 1, SOUTH).turnLeft();
     assertEquals(1, marsOver.getX());
     assertEquals(1, marsOver.getY());
-    assertEquals("East", marsOver.getDirection());
+    assertEquals(EAST, marsOver.getDirection());
   }
 
   @Test
   void should_return_west_coordinate_1_1_when_turn_right_given_south_coordinate_1_1() {
-    MarsOver marsOver = new MarsOver(1, 1, "South").turnRight();
+    MarsOver marsOver = new MarsOver(1, 1, SOUTH).turnRight();
     assertEquals(1, marsOver.getX());
     assertEquals(1, marsOver.getY());
-    assertEquals("West", marsOver.getDirection());
+    assertEquals(WEST, marsOver.getDirection());
   }
 
   @Test
   void should_return_west_coordinate_0_1_when_go_forward_given_west_coordinate_1_1() {
-    MarsOver marsOver = new MarsOver(1, 1, "West").goForward();
+    MarsOver marsOver = new MarsOver(1, 1, WEST).goForward();
     assertEquals(0, marsOver.getX());
     assertEquals(1, marsOver.getY());
-    assertEquals("West", marsOver.getDirection());
+    assertEquals(WEST, marsOver.getDirection());
+  }
+
+  @Test
+  void should_return_south_coordinate_1_1_when_turn_left_given_west_coordinate_1_1() {
+    MarsOver marsOver = new MarsOver(1, 1, WEST).turnLeft();
+    assertEquals(1, marsOver.getX());
+    assertEquals(1, marsOver.getY());
+    assertEquals(SOUTH, marsOver.getDirection());
   }
 }
