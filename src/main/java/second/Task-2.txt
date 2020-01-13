@@ -1,0 +1,65 @@
+Task-2
+design: Direction enum & extend base class
+
+goForward
+1.
+given: position(1, 1) and direction(north)
+when: goForward
+then: return position(1, 2) and north direction
+
+2.
+given: position(1, 1) and direction(south)
+when: goForward
+then: return position(1, 0) and south direction
+
+3.
+given: position(1, 1) and direction(west)
+when: goForward
+then: return position(0, 1) and west direction
+
+4.
+given: position(1, 1) and direction(east)
+when: goForward
+then: return position(1, 2) and north direction
+
+turnLeft:
+5.
+given: position(1, 1) and direction(north)
+when: turnLeft
+then: return position(1, 1) and west direction
+
+6.
+given: position(1, 1) and direction(south)
+when: turnLeft
+then: return position(1, 1) and east direction
+
+7.
+given: position(1, 1) and direction(west)
+when: turnLeft
+then: return position(1, 1) and south direction
+
+8.
+given: position(1, 1) and direction(east)
+when: turnLeft
+then: return position(1, 1) and north direction
+
+turnRight
+9.
+given: position(1, 1) and direction(north)
+when: turnRight
+then: return position(1, 1) and east direction
+
+10.
+given: position(1, 1) and direction(south)
+when: turnRight
+then: return position(1, 1) and west direction
+
+11.
+given: position(1, 1) and direction(west)
+when: turnRight
+then: return position(1, 1) and north direction
+
+12.
+given: position(1, 1) and direction(east)
+when: turnRight
+then: return position(1, 1) and south direction
