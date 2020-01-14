@@ -13,7 +13,4 @@ public class SecondSouthMarsOver extends SecondMarsOver {
     return new SecondSouthMarsOver(super.getX(), super.getY() - 1);
   }
 
-  public SecondMarsOver turnLeft() {
-    return new SecondEastMarsOver(super.getX(), super.getY());
-  }
 }

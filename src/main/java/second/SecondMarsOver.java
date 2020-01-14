@@ -25,7 +25,9 @@ public class SecondMarsOver {
   }
 
   public SecondMarsOver turnLeft() {
-    return new SecondSouthMarsOver(x, y);
+    int originalIndex = Arrays.asList(values()).indexOf(direction);
+    int indexOfLeft = originalIndex == 0 ? 3 : originalIndex - 1;
+    return new SecondMarsOver(x, y, values()[indexOfLeft]);
   }
 
   @Override
