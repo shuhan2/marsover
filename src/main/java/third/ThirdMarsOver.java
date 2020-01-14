@@ -40,9 +40,8 @@ public class ThirdMarsOver {
   }
 
   public ThirdMarsOver turnRight() {
-    if (direction == EAST) {
-      return new ThirdMarsOver(x, y, SOUTH);
-    }
-    return new ThirdMarsOver(x, y, EAST);
+    int originalIndex = Arrays.asList(values()).indexOf(direction);
+    int indexOfRight = originalIndex + 1;
+    return new ThirdMarsOver(x, y, values()[indexOfRight]);
   }
 }
