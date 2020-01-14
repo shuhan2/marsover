@@ -41,7 +41,7 @@ public class ThirdMarsOver {
 
   public ThirdMarsOver turnRight() {
     int originalIndex = Arrays.asList(values()).indexOf(direction);
-    int indexOfRight = originalIndex + 1;
+    int indexOfRight = originalIndex == 3 ? 0 : originalIndex + 1;
     return new ThirdMarsOver(x, y, values()[indexOfRight]);
   }
 }
