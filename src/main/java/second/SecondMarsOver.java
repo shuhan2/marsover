@@ -30,6 +30,10 @@ public class SecondMarsOver {
     return new SecondMarsOver(x, y, values()[indexOfLeft]);
   }
 
+  public SecondMarsOver turnRight() {
+    return new SecondEastMarsOver(x, y);
+  }
+
   @Override
   public int hashCode() {
     return this.x * 13 + this.y * 17 +
