@@ -3,6 +3,8 @@ package third;
 import java.util.Arrays;
 
 import static third.ThirdDirection.EAST;
+import static third.ThirdDirection.SOUTH;
+import static third.ThirdDirection.WEST;
 import static third.ThirdDirection.values;
 
 public class ThirdMarsOver {
@@ -38,6 +40,9 @@ public class ThirdMarsOver {
   }
 
   public ThirdMarsOver turnRight() {
+    if (direction == EAST) {
+      return new ThirdMarsOver(x, y, SOUTH);
+    }
     return new ThirdMarsOver(x, y, EAST);
   }
 }
