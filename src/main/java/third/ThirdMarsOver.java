@@ -2,6 +2,7 @@ package third;
 
 import java.util.Arrays;
 
+import static third.ThirdDirection.EAST;
 import static third.ThirdDirection.values;
 
 public class ThirdMarsOver {
@@ -33,6 +34,10 @@ public class ThirdMarsOver {
 
     int originalIndex = Arrays.asList(values()).indexOf(direction);
     int indexOfLeft = originalIndex == 0 ? 3 : originalIndex - 1;
-    return new ThirdMarsOver(x, y,values()[indexOfLeft]);
+    return new ThirdMarsOver(x, y, values()[indexOfLeft]);
+  }
+
+  public ThirdMarsOver turnRight() {
+    return new ThirdMarsOver(x, y, EAST);
   }
 }
