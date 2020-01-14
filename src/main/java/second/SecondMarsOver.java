@@ -2,6 +2,7 @@ package second;
 
 import java.util.Arrays;
 
+import static second.SecondDirection.SOUTH;
 import static second.SecondDirection.values;
 
 public class SecondMarsOver {
@@ -31,6 +32,9 @@ public class SecondMarsOver {
   }
 
   public SecondMarsOver turnRight() {
+    if(direction == SOUTH) {
+      return new SecondWestMarsOver(x, y);
+    }
     return new SecondEastMarsOver(x, y);
   }
 
@@ -49,6 +53,5 @@ public class SecondMarsOver {
     }
     return false;
   }
-
 
 }
