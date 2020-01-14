@@ -44,4 +44,8 @@ public class ThirdMarsOver {
     int indexOfRight = originalIndex == 3 ? 0 : originalIndex + 1;
     return new ThirdMarsOver(x, y, values()[indexOfRight]);
   }
+
+  public ThirdMarsOver goForward() {
+    return new ThirdMarsOver(x, y+1, direction);
+  }
 }
