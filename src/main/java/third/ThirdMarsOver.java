@@ -46,6 +46,9 @@ public class ThirdMarsOver {
   }
 
   public ThirdMarsOver goForward() {
+    if (direction == SOUTH) {
+      return new ThirdMarsOver(x, y - 1, direction);
+    }
     if (direction == EAST) {
       return new ThirdMarsOver(x + 1, y, direction);
     }
