@@ -26,4 +26,14 @@ class ThirdMarsOverTest {
     assertEquals(1, thirdMarsOver.getY());
     assertEquals(EAST, thirdMarsOver.getDirection());
   }
+
+  @Test
+  void should_return_north_x_1_y_1_when_turn_left_given_east_x_1_y_1() {
+    ThirdMarsOver marsOver = new ThirdMarsOver(1, 1, EAST);
+    ThirdMarsOver thirdMarsOver = marsOver.turnLeft();
+
+    assertEquals(1, thirdMarsOver.getX());
+    assertEquals(1, thirdMarsOver.getY());
+    assertEquals(NORTH, thirdMarsOver.getDirection());
+  }
 }
