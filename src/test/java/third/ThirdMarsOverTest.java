@@ -88,7 +88,7 @@ class ThirdMarsOverTest {
   }
 
   @Test
-  void should_return_north_x_1_y_2_when_turn_right_given_north_x_1_y_1() {
+  void should_return_north_x_1_y_2_when_go_forward_given_north_x_1_y_1() {
     ThirdMarsOver marsOver = new ThirdMarsOver(1, 1, NORTH);
     ThirdMarsOver thirdMarsOver = marsOver.goForward();
 
@@ -98,7 +98,7 @@ class ThirdMarsOverTest {
   }
 
   @Test
-  void should_return_east_x_2_y_1_when_turn_right_given_east_x_1_y_1() {
+  void should_return_east_x_2_y_1_when_go_forward_given_east_x_1_y_1() {
     ThirdMarsOver marsOver = new ThirdMarsOver(1, 1, EAST);
     ThirdMarsOver thirdMarsOver = marsOver.goForward();
 
@@ -108,12 +108,22 @@ class ThirdMarsOverTest {
   }
 
   @Test
-  void should_return_south_x_1_y_0_when_turn_right_given_south_x_1_y_1() {
+  void should_return_south_x_1_y_0_when_go_forward_given_south_x_1_y_1() {
     ThirdMarsOver marsOver = new ThirdMarsOver(1, 1, SOUTH);
     ThirdMarsOver thirdMarsOver = marsOver.goForward();
 
     assertEquals(1, thirdMarsOver.getX());
     assertEquals(0, thirdMarsOver.getY());
     assertEquals(SOUTH, thirdMarsOver.getDirection());
+  }
+
+  @Test
+  void should_return_west_x_0_y_1_when_go_forward_given_west_x_1_y_1() {
+    ThirdMarsOver marsOver = new ThirdMarsOver(1, 1, WEST);
+    ThirdMarsOver thirdMarsOver = marsOver.goForward();
+
+    assertEquals(0, thirdMarsOver.getX());
+    assertEquals(1, thirdMarsOver.getY());
+    assertEquals(WEST, thirdMarsOver.getDirection());
   }
 }
