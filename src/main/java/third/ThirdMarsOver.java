@@ -28,6 +28,9 @@ public class ThirdMarsOver {
   }
 
   public ThirdMarsOver turnLeft() {
+    if (direction == SOUTH) {
+      return new ThirdMarsOver(x, y, EAST);
+    }
     return new ThirdMarsOver(x, y, WEST);
   }
 }
