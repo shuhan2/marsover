@@ -1,0 +1,33 @@
+package third;
+
+import static third.ThirdDirection.*;
+
+public class ThirdMarsOver {
+
+  private int x;
+  private int y;
+  private ThirdDirection direction;
+
+  public ThirdMarsOver(int x, int y, ThirdDirection direction) {
+
+    this.x = x;
+    this.y = y;
+    this.direction = direction;
+  }
+
+  public int getX() {
+    return x;
+  }
+
+  public int getY() {
+    return y;
+  }
+
+  public ThirdDirection getDirection() {
+    return direction;
+  }
+
+  public ThirdMarsOver turnLeft() {
+    return new ThirdMarsOver(x, y, WEST);
+  }
+}
