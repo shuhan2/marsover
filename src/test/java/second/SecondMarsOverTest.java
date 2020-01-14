@@ -76,4 +76,11 @@ class SecondMarsOverTest {
 
     assertEquals(new SecondWestMarsOver(1, 1), marsOver);
   }
+
+  @Test
+  void should_return_south_x_1_y_1_when_turn_right_given_east_x_1_y_1() {
+    SecondMarsOver marsOver = new SecondEastMarsOver(1, 1).turnRight();
+
+    assertEquals(new SecondSouthMarsOver(1, 1), marsOver);
+  }
 }

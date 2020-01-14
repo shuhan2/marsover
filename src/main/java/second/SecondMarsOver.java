@@ -32,10 +32,8 @@ public class SecondMarsOver {
   }
 
   public SecondMarsOver turnRight() {
-    if(direction == SOUTH) {
-      return new SecondWestMarsOver(x, y);
-    }
-    return new SecondEastMarsOver(x, y);
+    int indexOfRight = Arrays.asList(values()).indexOf(direction) + 1;
+    return new SecondMarsOver(x, y, values()[indexOfRight]);
   }
 
   @Override
