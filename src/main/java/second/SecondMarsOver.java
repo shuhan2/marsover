@@ -24,6 +24,10 @@ public class SecondMarsOver {
     return y;
   }
 
+  public SecondMarsOver turnLeft() {
+    return new SecondSouthMarsOver(x, y);
+  }
+
   @Override
   public int hashCode() {
     return this.x * 13 + this.y * 17 +
@@ -39,4 +43,6 @@ public class SecondMarsOver {
     }
     return false;
   }
+
+
 }
