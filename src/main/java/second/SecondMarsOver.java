@@ -32,7 +32,8 @@ public class SecondMarsOver {
   }
 
   public SecondMarsOver turnRight() {
-    int indexOfRight = Arrays.asList(values()).indexOf(direction) + 1;
+    int originalIndex = Arrays.asList(values()).indexOf(direction);
+    int indexOfRight = originalIndex == 3 ? 0 : originalIndex + 1;
     return new SecondMarsOver(x, y, values()[indexOfRight]);
   }
 
